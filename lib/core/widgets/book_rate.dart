@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../core/utils/styles.dart';
+import '../utils/styles.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({

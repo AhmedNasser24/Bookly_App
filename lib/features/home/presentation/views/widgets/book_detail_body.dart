@@ -1,12 +1,12 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/book_cover_item.dart';
+import 'package:bookly_app/core/widgets/book_cover_item.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/you_can_also_like_these_books.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import 'appbar_of_book_detail.dart';
-import 'book_rate.dart';
+import '../../../../../core/widgets/book_rate.dart';
 import 'way_to_buy_book.dart';
 
 class BookDetailsBody extends StatelessWidget {
@@ -22,7 +22,7 @@ class BookDetailsBody extends StatelessWidget {
       children: [
         const AppBarOfBookDetail(),
         Gap(20 * screenH / myScreenH),
-        const BookCoverItem(
+        const BookCover(
             heightRatio: 0.33, image: 'assets/images/images.jpg'),
         Gap(25 * screenH / myScreenH),
         const Text(

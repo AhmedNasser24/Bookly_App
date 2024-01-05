@@ -2,8 +2,8 @@ import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
 
-class BookCoverItem extends StatelessWidget {
-  const BookCoverItem({
+class BookCover extends StatelessWidget {
+  const BookCover({
     super.key,
     required this.heightRatio,
     required this.image , this.onTap,

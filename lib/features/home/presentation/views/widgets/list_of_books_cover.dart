@@ -2,7 +2,7 @@ import 'package:bookly_app/core/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'book_cover_item.dart';
+import '../../../../../core/widgets/book_cover_item.dart';
 
 class ListOfBooksCover extends StatelessWidget {
   const ListOfBooksCover({
@@ -17,7 +17,7 @@ class ListOfBooksCover extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: 6,
-        itemBuilder: (context, index) => BookCoverItem(
+        itemBuilder: (context, index) => BookCover(
           heightRatio: 0.3,
           image: 'assets/images/images.jpg',
           onTap: () => context.push(AppRoutes.kBookDetailsView)

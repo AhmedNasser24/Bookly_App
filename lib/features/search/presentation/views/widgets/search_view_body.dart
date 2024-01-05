@@ -1,33 +1,29 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/search/presentation/views/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
-import 'search_icon_button.dart';
+import 'listview_of_book_item.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-      child: Column(
-        children: [
-          TextFormField(
-            decoration: InputDecoration(
-              hintText: 'search',
-              suffixIcon: const SearchIconButton(),
-              enabledBorder: borderDecoration(),
-              focusedBorder: borderDecoration(),
-            ),
-          )
-        ],
-      ),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Gap(30),
+        CustomTextFormField(),
+        Gap(20),
+        Text(
+          'Results',
+          style: Style.textStyle22,
+        ),
+        Gap(20),
+        ListViewOfBookItem(),
+      ]),
     );
-  }
-
-  OutlineInputBorder borderDecoration() {
-    return OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Colors.white));
   }
 }
