@@ -20,7 +20,7 @@ class ListOfBooksCover extends StatelessWidget {
         itemBuilder: (context, index) => BookCoverItem(
           heightRatio: 0.3,
           image: 'assets/images/images.jpg',
-          onTap: () => context.pushReplacement(AppRoutes.kBookDetailsView)
+          onTap: () => context.push(AppRoutes.kBookDetailsView)
         ),
       ),
     );
