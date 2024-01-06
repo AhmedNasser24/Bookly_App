@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../constants.dart';
-import '../../../../../core/utils/styles.dart';
-import '../../../../../core/widgets/book_rate.dart';
+import '../../constants.dart';
+import '../utils/styles.dart';
+import 'book_rate.dart';
 
 class BookCoverDetails extends StatelessWidget {
   const BookCoverDetails({

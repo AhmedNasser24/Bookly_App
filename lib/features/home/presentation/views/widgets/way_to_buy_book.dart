@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../../constants.dart';
@@ -12,9 +11,10 @@ class WayToBuyBook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding + 12.0),
+      padding:
+          const EdgeInsets.symmetric(horizontal: kHorizontalPadding + 12.0),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.08 ,
+        height: MediaQuery.of(context).size.height * 0.08,
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [

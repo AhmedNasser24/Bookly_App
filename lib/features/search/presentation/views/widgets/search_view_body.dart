@@ -4,7 +4,7 @@ import 'package:bookly_app/features/search/presentation/views/widgets/custom_tex
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'listview_of_book_item.dart';
+import 'search_result_listview.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -22,7 +22,7 @@ class SearchViewBody extends StatelessWidget {
           style: Style.textStyle22,
         ),
         Gap(20),
-        ListViewOfBookItem(),
+        SearchResultListView(),
       ]),
     );
   }

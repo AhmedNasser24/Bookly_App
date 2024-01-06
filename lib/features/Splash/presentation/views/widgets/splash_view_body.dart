@@ -18,7 +18,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 3), () {
-      context.pushReplacement(AppRoutes.kHomeView) ;
+      context.pushReplacement(AppRoutes.kHomeView);
     });
   }
 

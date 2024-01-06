@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +12,7 @@ class YouCanAlsoLikeTheseBooks extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(left : kHorizontalPadding),
+        padding: const EdgeInsets.only(left: kHorizontalPadding),
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 20,

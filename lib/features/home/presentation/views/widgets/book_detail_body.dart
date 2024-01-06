@@ -22,8 +22,7 @@ class BookDetailsBody extends StatelessWidget {
       children: [
         const AppBarOfBookDetail(),
         Gap(20 * screenH / myScreenH),
-        const BookCover(
-            heightRatio: 0.33, image: 'assets/images/images.jpg'),
+        const BookCover(heightRatio: 0.33, image: 'assets/images/images.jpg'),
         Gap(25 * screenH / myScreenH),
         const Text(
           'The Forest Book',

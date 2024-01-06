@@ -18,10 +18,9 @@ class ListOfBooksCover extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 6,
         itemBuilder: (context, index) => BookCover(
-          heightRatio: 0.3,
-          image: 'assets/images/images.jpg',
-          onTap: () => context.push(AppRoutes.kBookDetailsView)
-        ),
+            heightRatio: 0.3,
+            image: 'assets/images/images.jpg',
+            onTap: () => context.push(AppRoutes.kBookDetailsView)),
       ),
     );
   }

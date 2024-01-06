@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'book_item.dart';
+import 'result_book_item.dart';
 
-class ListViewOfBookItem extends StatelessWidget {
-  const ListViewOfBookItem({
+class SearchResultListView extends StatelessWidget {
+  const SearchResultListView({
     super.key,
   });
 
@@ -12,7 +12,7 @@ class ListViewOfBookItem extends StatelessWidget {
     return Expanded(
       child: ListView.builder(
         itemCount: 8,
-        itemBuilder: (context, index) => const BookItem(),
+        itemBuilder: (context, index) => const ResultBookItem(),
       ),
     );
   }

@@ -1,16 +1,16 @@
 import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
-
 class BookCover extends StatelessWidget {
   const BookCover({
     super.key,
     required this.heightRatio,
-    required this.image , this.onTap,
+    required this.image,
+    this.onTap,
   });
   final double heightRatio;
   final String image;
-  final void Function()? onTap ; 
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Padding(

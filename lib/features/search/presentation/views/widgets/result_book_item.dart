@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/book_cover_item.dart';
-import 'book_cover_details.dart';
+import '../../../../../core/widgets/book_cover_details.dart';
 
-class BookItem extends StatelessWidget {
-  const BookItem({
+class ResultBookItem extends StatelessWidget {
+  const ResultBookItem({
     super.key,
   });
 

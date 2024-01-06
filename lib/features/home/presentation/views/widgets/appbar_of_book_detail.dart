@@ -13,7 +13,7 @@ class AppBarOfBookDetail extends StatelessWidget {
         IconButton(
           padding: EdgeInsets.zero,
           onPressed: () {
-            context.pop() ;
+            context.pop();
           },
           icon: const Icon(Icons.close_rounded),
         ),
