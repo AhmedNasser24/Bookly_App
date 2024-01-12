@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../../core/widgets/book_cover_item.dart';
 import '../../../../../core/widgets/book_cover_details.dart';
 
-class BestSellerBookItem extends StatelessWidget {
-  const BestSellerBookItem({
+class NewestBookItem extends StatelessWidget {
+  const NewestBookItem({
     super.key,
   });
 

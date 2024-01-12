@@ -3,9 +3,9 @@ import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import 'book_item.dart';
 import 'custom_appbar.dart';
 import 'list_of_books_cover.dart';
+import 'newest_book_list.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -27,7 +27,7 @@ class HomeViewBody extends StatelessWidget {
                 const ListOfBooksCover(),
                 const Gap(40),
                 Text(
-                  'Best Seller',
+                  'Newest Book',
                   style: Style.bestSellerStyle,
                 ),
                 const Gap(15),
@@ -35,15 +35,7 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) => const Padding(
-              padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-              child: BestSellerBookItem(),
-            ),
-            childCount: 18,
-          ),
-        ),
+        const NewestBooksList(),
       ],
     );
   }
