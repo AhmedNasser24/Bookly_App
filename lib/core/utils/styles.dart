@@ -6,8 +6,8 @@ class Style {
     textStyle: const TextStyle(
         fontSize: 18.0, fontWeight: FontWeight.w600, color: Colors.white),
   );
-  static const TextStyle textStyle25 =
-      TextStyle(fontSize: 25, fontFamily: 'GT Sectra Fine');
+  static const TextStyle textStyle20 =
+      TextStyle(fontSize: 20, fontFamily: 'GT Sectra Fine');
   static const TextStyle textStyle18 =
       TextStyle(fontSize: 18, fontWeight: FontWeight.w600);
   static const TextStyle textStyle14 =

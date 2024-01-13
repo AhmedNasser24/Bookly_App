@@ -19,9 +19,9 @@ class ResultBookItem extends StatelessWidget {
         children: [
           BookCover(
             heightRatio: heightRatio,
-            image: 'assets/images/images.jpg',
+            imageUrl: 'assets/images/images.jpg',
           ),
-          const BookCoverDetails()
+          // const BookCoverDetails()
         ],
       ),
     );

@@ -6,8 +6,10 @@ import 'book_rate.dart';
 
 class BookCoverDetails extends StatelessWidget {
   const BookCoverDetails({
-    super.key,
+    super.key, required this.title, required this.author,
   });
+  final String title ;
+  final String author ;
 
   @override
   Widget build(BuildContext context) {
@@ -21,17 +23,19 @@ class BookCoverDetails extends StatelessWidget {
           SizedBox(
             width: (180.0 / myScreenW) * screenW,
             child: Text(
-              'Harry Potter and the Goblet Of Fire',
+              title,
               style: Style.textStyle18.copyWith(fontFamily: 'GT Sectra Fine'),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          const Opacity(
+          Opacity(
             opacity: 0.6,
             child: Text(
-              'J.K.Rowling',
+              author,
               style: Style.textStyle14,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
           const Row(

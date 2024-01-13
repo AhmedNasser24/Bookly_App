@@ -18,7 +18,7 @@ class YouCanAlsoLikeTheseBooks extends StatelessWidget {
           itemCount: 20,
           itemBuilder: (context, index) => const BookCover(
             heightRatio: 0.12,
-            image: 'assets/images/images (1).jpg',
+            imageUrl: 'assets/images/images (1).jpg',
           ),
         ),
       ),

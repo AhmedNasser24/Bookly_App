@@ -24,12 +24,12 @@ class AppRoutes {
           return const HomeView();
         },
       ),
-      GoRoute(
-        path: kBookDetailsView,
-        builder: (BuildContext context, GoRouterState state) {
-          return const BookDetailsView();
-        },
-      ),
+      // GoRoute(
+      //   path: kBookDetailsView,
+      //   builder: (BuildContext context, GoRouterState state) {
+      //     return const BookDetailsView(imageUrl:'assets/images/images.jpg' ,);
+      //   },
+      // ),
       GoRoute(
         path: kSearchView,
         builder: (context, state) {
