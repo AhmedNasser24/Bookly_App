@@ -28,7 +28,7 @@ class BookCover extends StatelessWidget {
               borderRadius: BorderRadius.circular(kBorderRadius),
               child: CachedNetworkImage(
                 fit: BoxFit.fill,
-                imageUrl: bookItem.volumeInfo.imageLinks.thumbnail,
+                imageUrl: bookItem.volumeInfo.imageLinks?.thumbnail ?? '',
                 placeholder: (context, url) => const CustomLoadingIndicator(),
                 errorWidget: (context, url, error) => const Icon(Icons.error , size: 40,)
               ),

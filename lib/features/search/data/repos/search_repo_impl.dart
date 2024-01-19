@@ -13,10 +13,14 @@ class SearchRepoImpl implements SearchRepo {
       Map<String, dynamic> data = await apiService.get(
           endpoint: 'volumes?orderBy=relevance&q=$bookName');
       List<BookModel> books = [];
-      for (var item in data['items']) {
-        books.add(BookModel.fromJson(item));
+      if (data['items'] != null) {
+        for (var item in data['items']) {
+          books.add(BookModel.fromJson(item));
+        }
+        return right(books);
+      } else {
+        return left(const ServerFailure('No Results'));
       }
-      return right(books) ;
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
     } catch (e) {

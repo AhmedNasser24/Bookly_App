@@ -1,10 +1,12 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utils/app_routes.dart';
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/core/widgets/show_error_message.dart';
 import 'package:bookly_app/features/home/data/model/book_model/book_model.dart';
 import 'package:bookly_app/features/home/presentation/manager/fetch_similar_book.dart/fetch_similar_book_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/widgets/book_cover_item.dart';
 
@@ -28,6 +30,9 @@ class YouCanAlsoLikeTheseBooks extends StatelessWidget {
                 itemBuilder: (context, index) => BookCover(
                   heightRatio: 0.12,
                   bookItem: state.books[index],
+                  onTap: () => GoRouter.of(context).pushReplacement(
+                      AppRoutes.kBookDetailsView,
+                      extra: state.books[index]),
                 ),
               ),
             ),
