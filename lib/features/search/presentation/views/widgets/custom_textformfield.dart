@@ -1,4 +1,6 @@
+import 'package:bookly_app/features/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'search_icon_button.dart';
 
@@ -7,10 +9,16 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String bookName = '';
     return TextFormField(
+      onChanged: (value) {
+        bookName = value;
+      },
       decoration: InputDecoration(
         hintText: 'search',
-        suffixIcon: const SearchIconButton(),
+        suffixIcon: SearchIconButton(
+            onPressed: () => BlocProvider.of<SearchCubit>(context)
+                .getSearchResult(bookName)),
         enabledBorder: borderDecoration(),
         focusedBorder: borderDecoration(),
       ),

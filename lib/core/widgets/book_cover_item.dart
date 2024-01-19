@@ -1,5 +1,6 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
+import 'package:bookly_app/features/home/data/model/book_model/book_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -7,11 +8,11 @@ class BookCover extends StatelessWidget {
   const BookCover({
     super.key,
     required this.heightRatio,
-    required this.imageUrl,
-    this.onTap,
+    
+    this.onTap, required this.bookItem,
   });
   final double heightRatio;
-  final String imageUrl;
+  final BookModel bookItem;
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -27,12 +28,9 @@ class BookCover extends StatelessWidget {
               borderRadius: BorderRadius.circular(kBorderRadius),
               child: CachedNetworkImage(
                 fit: BoxFit.fill,
-                imageUrl: imageUrl,
+                imageUrl: bookItem.volumeInfo.imageLinks.thumbnail,
                 placeholder: (context, url) => const CustomLoadingIndicator(),
-                errorWidget: (context, url, error) => Image.asset(
-                  'assets/images/images.jpg',
-                  fit: BoxFit.fill,
-                ),
+                errorWidget: (context, url, error) => const Icon(Icons.error , size: 40,)
               ),
             ),
           ),

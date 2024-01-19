@@ -25,7 +25,7 @@ class BookDetailsBody extends StatelessWidget {
         Gap(16 * screenH / myScreenH),
         BookCover(
             heightRatio: 0.33,
-            imageUrl: bookItem.volumeInfo.imageLinks.thumbnail),
+            bookItem: bookItem),
         Gap(25 * screenH / myScreenH),
         SizedBox(
           width: screenW * 3 / 4,
@@ -62,7 +62,7 @@ class BookDetailsBody extends StatelessWidget {
           ),
         ),
         Gap(12 * screenH / myScreenH),
-        const YouCanAlsoLikeTheseBooks(),
+        YouCanAlsoLikeTheseBooks(bookItem : bookItem),
         Gap(15 * screenH / myScreenH),
       ],
     );

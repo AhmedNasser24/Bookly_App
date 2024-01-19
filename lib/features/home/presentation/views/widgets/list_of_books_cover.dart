@@ -1,9 +1,10 @@
+import 'package:bookly_app/core/utils/app_routes.dart';
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/core/widgets/show_error_message.dart';
 import 'package:bookly_app/features/home/presentation/manager/fetch_feature_book_cubit/fetch_featured_book_cubit.dart';
-import 'package:bookly_app/features/home/presentation/views/book_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/widgets/book_cover_item.dart';
 
@@ -24,16 +25,11 @@ class ListOfBooksCover extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: state.book.length,
               itemBuilder: (context, index) => BookCover(
-                heightRatio: 0.3,
-                imageUrl: state.book[index].volumeInfo.imageLinks.thumbnail,
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        BookDetailsView(bookItem: state.book[index]),
-                  ),
-                ),
-              ),
+                  heightRatio: 0.3,
+                  bookItem: state.book[index],
+                  onTap: () => GoRouter.of(context).push(
+                      AppRoutes.kBookDetailsView,
+                      extra: state.book[index])),
             ),
           );
         } else if (state is FetchFeaturedBookFailure) {
