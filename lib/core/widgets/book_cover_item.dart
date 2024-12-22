@@ -8,11 +8,11 @@ class BookCover extends StatelessWidget {
   const BookCover({
     super.key,
     required this.heightRatio,
-    
-    this.onTap, required this.bookItem,
+    this.onTap,
+    required this.bookItem,
   });
   final double heightRatio;
-  final BookModel bookItem;
+  final BookModel? bookItem;
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -27,11 +27,13 @@ class BookCover extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(kBorderRadius),
               child: CachedNetworkImage(
-                fit: BoxFit.fill,
-                imageUrl: bookItem.volumeInfo.imageLinks?.thumbnail ?? '',
-                placeholder: (context, url) => const CustomLoadingIndicator(),
-                errorWidget: (context, url, error) => const Icon(Icons.error , size: 40,)
-              ),
+                  fit: BoxFit.fill,
+                  imageUrl: bookItem?.volumeInfo.imageLinks?.thumbnail ?? '',
+                  placeholder: (context, url) => const CustomLoadingIndicator(),
+                  errorWidget: (context, url, error) => const Icon(
+                        Icons.error,
+                        size: 40,
+                      )),
             ),
           ),
         ),
@@ -39,3 +41,4 @@ class BookCover extends StatelessWidget {
     );
   }
 }
+

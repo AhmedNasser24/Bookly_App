@@ -17,17 +17,16 @@ class NewestBookItem extends StatelessWidget {
     double screenH = MediaQuery.of(context).size.height;
     double heightRatio = 0.2;
     return InkWell(
-      onTap: () => GoRouter.of(context).push(AppRoutes.kBookDetailsView , extra: bookItem ),
-      child: Container(
-        margin: const EdgeInsets.only(bottom: 12),
-        height: screenH * heightRatio,
+      onTap: () => GoRouter.of(context)
+          .push(AppRoutes.kBookDetailsView, extra: bookItem),
+      child: IntrinsicHeight(
         child: Row(
           children: [
             BookCover(
               heightRatio: heightRatio,
-              bookItem : bookItem,
+              bookItem: bookItem,
             ),
-            BookCoverDetails(
+            BookCoverDetails( 
                 title: bookItem.volumeInfo.title ?? 'i am author',
                 author: bookItem.volumeInfo.authors?[0] ?? 'ahmed nasser')
           ],
@@ -36,3 +35,6 @@ class NewestBookItem extends StatelessWidget {
     );
   }
 }
+
+// used in shimmer
+

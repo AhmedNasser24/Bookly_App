@@ -1,6 +1,9 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/presentation/manager/fetch_feature_book_cubit/fetch_featured_book_cubit.dart';
+import 'package:bookly_app/features/home/presentation/manager/fetch_newest_book/fetch_newest_book_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 import 'custom_appbar.dart';
@@ -14,12 +17,19 @@ class HomeViewBody extends StatefulWidget {
   State<HomeViewBody> createState() => _HomeViewBodyState();
 }
 
-Future<void> _refreshData() async {
-  // Simulate fetching new data
-  await Future.delayed(const Duration(seconds: 2));
-}
-
 class _HomeViewBodyState extends State<HomeViewBody> {
+  Future<void> _refreshData() async {
+    BlocProvider.of<FetchFeaturedBookCubit>(context).getFeatureBooks();
+    BlocProvider.of<FetchNewestBookCubit>(context).getNewestBooks();
+    // Simulate fetching new data
+    await Future.delayed(const Duration(seconds: 2));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
