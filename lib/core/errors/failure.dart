@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -10,6 +12,7 @@ class ServerFailure extends Failure {
   const ServerFailure(super.errMessage);
 
   factory ServerFailure.fromDioException(DioException dioException) {
+    log(dioException.toString());
     switch (dioException.type) {
       case DioExceptionType.connectionTimeout:
         return const ServerFailure('Connection time out with ApiServer');
