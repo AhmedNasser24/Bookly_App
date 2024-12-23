@@ -42,7 +42,7 @@ class BookDetailsBody extends StatelessWidget {
           child: Center(
             child: Text(
               bookItem.volumeInfo.authors?[0] as String? ?? 'ahmed nasser',
-              style: Style.textStyle14.copyWith(color: Colors.grey),
+              style: Style.semibold14.copyWith(color: Colors.grey),
               overflow: TextOverflow.ellipsis,
             ),
           ),
@@ -57,7 +57,7 @@ class BookDetailsBody extends StatelessWidget {
             padding: EdgeInsets.only(left: kHorizontalPadding),
             child: Text(
               'you can also like',
-              style: Style.textStyle14,
+              style: Style.semibold14,
             ),
           ),
         ),

@@ -12,7 +12,7 @@ class ShowErrorMessage extends StatelessWidget {
     return Center(
       child: Text(
         errMessage,
-        style: Style.textStyle22,
+        style: Style.bold22,
         textAlign: TextAlign.center,
       ),
     );

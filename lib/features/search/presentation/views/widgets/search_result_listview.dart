@@ -21,7 +21,7 @@ class SearchResultListView extends StatelessWidget {
             child: Center(
               child: Text(
                 'search for you favourite books',
-                style: Style.textStyle22,
+                style: Style.bold22,
               ),
             ),
           );

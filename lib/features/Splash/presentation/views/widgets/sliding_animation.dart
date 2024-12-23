@@ -31,7 +31,7 @@ class _SlidingAnimationState extends State<SlidingAnimation>
   Widget build(BuildContext context) {
     return SlideTransition(
       position: slidingAnimation,
-      child: Image.asset(AssetsData.logo),
+      child: Image.asset(Assets.logo),
     );
   }
 

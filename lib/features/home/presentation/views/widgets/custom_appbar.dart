@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       children: [
         Image.asset(
-          AssetsData.logo,
+          Assets.logo,
           height: 32,
         ),
         const Spacer(),

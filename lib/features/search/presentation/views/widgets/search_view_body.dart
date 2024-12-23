@@ -19,7 +19,7 @@ class SearchViewBody extends StatelessWidget {
         Gap(20),
         Text(
           'Results',
-          style: Style.textStyle22,
+          style: Style.bold22,
         ),
         Gap(20),
         SearchResultListView(),

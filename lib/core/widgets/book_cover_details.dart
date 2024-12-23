@@ -24,7 +24,7 @@ class BookCoverDetails extends StatelessWidget {
             width: (180.0 / myScreenW) * screenW,
             child: Text(
               title,
-              style: Style.textStyle18.copyWith(fontFamily: 'GT Sectra Fine'),
+              style: Style.semibold18.copyWith(fontFamily: 'GT Sectra Fine'),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
@@ -33,7 +33,7 @@ class BookCoverDetails extends StatelessWidget {
             opacity: 0.6,
             child: Text(
               author,
-              style: Style.textStyle14,
+              style: Style.semibold14,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
@@ -42,7 +42,7 @@ class BookCoverDetails extends StatelessWidget {
             children: [
               Text(
                 '19.99\$',
-                style: Style.textStyle18,
+                style: Style.semibold18,
               ),
               Spacer(),
               BookRating(),

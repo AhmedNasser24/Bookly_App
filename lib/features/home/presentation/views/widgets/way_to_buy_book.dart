@@ -29,7 +29,7 @@ class WayToBuyBook extends StatelessWidget {
                 child: Center(
                   child: Text(
                     '19.99\$',
-                    style: Style.textStyle14.copyWith(color: Colors.black),
+                    style: Style.semibold14.copyWith(color: Colors.black),
                   ),
                 ),
               ),
@@ -45,7 +45,7 @@ class WayToBuyBook extends StatelessWidget {
                 child: const Center(
                   child: Text(
                     'Free Preview',
-                    style: Style.textStyle14,
+                    style: Style.semibold14,
                   ),
                 ),
               ),
