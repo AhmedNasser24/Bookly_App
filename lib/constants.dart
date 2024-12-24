@@ -7,6 +7,14 @@ const double kBorderRadius = 12;
 const double myScreenH = 739.3333333333334;
 const double myScreenW = 360;
 
+const Color kDarkGreenColor = Color(0xff1B5E37);
+const Color kLightGreenColor = Color(0xff2D9F5D);
+const Color kGrayColor = Color(0xff949D9E) ;
+const Color kWhiteColor = Colors.white ;
+
+const double kTopSpace = 20.0 ;
+const double kBottomSpace = 20.0 ;
+
 // api keys 
 
 const String kFullName = 'fullname';

@@ -1,5 +1,5 @@
 import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/core/utils/app_styles.dart';
 import 'package:bookly_app/features/home/presentation/manager/fetch_feature_book_cubit/fetch_featured_book_cubit.dart';
 import 'package:bookly_app/features/home/presentation/manager/fetch_newest_book/fetch_newest_book_cubit.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +55,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                   const Gap(40),
                   Text(
                     'Newest Book',
-                    style: Style.bestSellerStyle,
+                    style: AppStyles.bestSellerStyle,
                   ),
                   const Gap(15),
                 ],

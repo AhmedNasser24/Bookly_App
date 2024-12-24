@@ -1,5 +1,5 @@
 import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/core/utils/app_styles.dart';
 import 'package:bookly_app/features/search/presentation/views/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -19,7 +19,7 @@ class SearchViewBody extends StatelessWidget {
         Gap(20),
         Text(
           'Results',
-          style: Style.bold22,
+          style: AppStyles.bold22,
         ),
         Gap(20),
         SearchResultListView(),

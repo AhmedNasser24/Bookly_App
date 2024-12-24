@@ -5,25 +5,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'widgets/book_detail_body.dart';
 
-class BookDetailsView extends StatefulWidget {
+class BookDetailsView extends StatelessWidget {
   const BookDetailsView({super.key, required this.bookItem});
   final BookModel bookItem;
 
-  @override
-  State<BookDetailsView> createState() => _BookDetailsViewState();
-}
-
-class _BookDetailsViewState extends State<BookDetailsView> {
-  @override
-  void initState() {
-    BlocProvider.of<FetchSimilarBookCubit>(context).getSimilarBooks(category: widget.bookItem.volumeInfo.categories![0] ?? '' );
-    super.initState();
-  }
+  static const String routeName = "BookDetailsView";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BookDetailsBody(
-        bookItem: widget.bookItem,
+    return BlocProvider(
+      create: (context) => FetchSimilarBookCubit(),
+      child: Scaffold(
+        body: SafeArea(
+          child: BookDetailsBody(
+            bookItem: bookItem,
+          ),
+        ),
       ),
     );
   }

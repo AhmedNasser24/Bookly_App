@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/assets.dart';
+import '../../../../../core/utils/app_images.dart';
 
 class SlidingAnimation extends StatefulWidget {
   const SlidingAnimation({
@@ -31,7 +31,7 @@ class _SlidingAnimationState extends State<SlidingAnimation>
   Widget build(BuildContext context) {
     return SlideTransition(
       position: slidingAnimation,
-      child: Image.asset(Assets.logo),
+      child: Image.asset(Assets.imagesLogo),
     );
   }
 

@@ -41,7 +41,7 @@ class ServerFailure extends Failure {
     if (statusCode == 404) {
       return const ServerFailure('Not found');
     } else if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
-      return ServerFailure(errData['error']['message']);
+      return const ServerFailure("invalid email or password");
     } else {
       return const ServerFailure('Unknown bad response');
     }

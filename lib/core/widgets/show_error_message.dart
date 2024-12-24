@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class ShowErrorMessage extends StatelessWidget {
@@ -12,7 +12,7 @@ class ShowErrorMessage extends StatelessWidget {
     return Center(
       child: Text(
         errMessage,
-        style: Style.bold22,
+        style: AppStyles.bold22,
         textAlign: TextAlign.center,
       ),
     );

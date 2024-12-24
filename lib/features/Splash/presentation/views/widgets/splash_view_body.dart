@@ -1,7 +1,6 @@
 import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/app_routes.dart';
+import 'package:bookly_app/features/auth/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'fading_animation.dart';
 import 'sliding_animation.dart';
 
@@ -18,7 +17,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 3), () {
-      context.pushReplacement(AppRoutes.kHomeView);
+      Navigator.pushReplacementNamed(context , LoginView.routeName);
     });
   }
 

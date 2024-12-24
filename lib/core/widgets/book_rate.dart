@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../utils/styles.dart';
+import '../utils/app_styles.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({
@@ -20,12 +20,12 @@ class BookRating extends StatelessWidget {
         const Gap(6),
         const Text(
           '4.8',
-          style: Style.semibold14,
+          style: AppStyles.semibold14,
         ),
         const Gap(3),
         Text(
           '(2942)',
-          style: Style.semibold14.copyWith(color: Colors.grey),
+          style: AppStyles.semibold14.copyWith(color: Colors.grey),
         )
       ],
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../constants.dart';
-import '../../../../../core/utils/styles.dart';
+import '../../../../../core/utils/app_styles.dart';
 
 class WayToBuyBook extends StatelessWidget {
   const WayToBuyBook({
@@ -29,7 +29,7 @@ class WayToBuyBook extends StatelessWidget {
                 child: Center(
                   child: Text(
                     '19.99\$',
-                    style: Style.semibold14.copyWith(color: Colors.black),
+                    style: AppStyles.semibold14.copyWith(color: Colors.black),
                   ),
                 ),
               ),
@@ -45,7 +45,7 @@ class WayToBuyBook extends StatelessWidget {
                 child: const Center(
                   child: Text(
                     'Free Preview',
-                    style: Style.semibold14,
+                    style: AppStyles.semibold14,
                   ),
                 ),
               ),

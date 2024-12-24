@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class AppBarOfBookDetail extends StatelessWidget {
   const AppBarOfBookDetail({
@@ -13,7 +12,7 @@ class AppBarOfBookDetail extends StatelessWidget {
         IconButton(
           padding: EdgeInsets.zero,
           onPressed: () {
-            context.pop();
+            Navigator.pop(context);
           },
           icon: const Icon(Icons.close_rounded),
         ),

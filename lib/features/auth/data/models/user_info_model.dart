@@ -2,16 +2,17 @@ import 'package:bookly_app/constants.dart';
 
 class UserInfoModel {
   String? fullName, userName, email, password, confirmPassword, phone, address;
-  bool admin = false;
+  bool admin  , checkTerms ;
   UserInfoModel({
-    required this.fullName,
-    required this.userName,
-    required this.email,
-    required this.password,
-    required this.confirmPassword,
-    required this.phone,
-    required this.address,
-    required this.admin,
+    this.fullName,
+    this.userName,
+    this.email,
+    this.password,
+    this.confirmPassword,
+    this.phone,
+    this.address,
+    this.admin = false,
+    this.checkTerms = false,
   });
 
   factory UserInfoModel.fromJson(Map<String, dynamic> json) => UserInfoModel(
@@ -23,6 +24,7 @@ class UserInfoModel {
         phone: json['phone'],
         address: json['address'],
         admin: json['admin'],
+        checkTerms: true,
       );
   Map<String, dynamic> toJson() => {
         kFullName: fullName,

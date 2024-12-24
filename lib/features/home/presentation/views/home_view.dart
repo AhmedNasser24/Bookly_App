@@ -7,6 +7,7 @@ import 'widgets/home_view_body.dart';
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
+  static const String routeName = "Home View";
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -19,7 +20,7 @@ class HomeView extends StatelessWidget {
         )
       ],
       child: const Scaffold(
-        body: HomeViewBody(),
+        body: SafeArea(child: HomeViewBody()),
       ),
     );
   }

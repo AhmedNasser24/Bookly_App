@@ -23,8 +23,11 @@ class NewestBooksList extends StatelessWidget {
               (context, index) => Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-                child: NewestBookItem(
-                  bookItem: state.books[index],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical:  8.0),
+                  child: NewestBookItem(
+                    bookItem: state.books[index],
+                  ),
                 ),
               ),
             ),

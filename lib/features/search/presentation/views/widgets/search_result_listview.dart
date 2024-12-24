@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/core/utils/app_styles.dart';
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
 import 'package:bookly_app/core/widgets/show_error_message.dart';
 import 'package:bookly_app/features/search/presentation/manager/search_cubit/search_cubit.dart';
@@ -21,7 +21,7 @@ class SearchResultListView extends StatelessWidget {
             child: Center(
               child: Text(
                 'search for you favourite books',
-                style: Style.bold22,
+                style: AppStyles.bold22,
               ),
             ),
           );
