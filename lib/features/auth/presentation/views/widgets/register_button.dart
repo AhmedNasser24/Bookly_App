@@ -16,7 +16,7 @@ class RegisterButton extends StatelessWidget {
       title: "انشاء حساب",
       onTap: () {
         if (userInfoModel.checkTerms == false){
-          showSnackBar(context , "يجب الموافقة على الشروط والأحكام");
+          showSnackBar(context , "agree to our terms and conditions");
         }
         else if (formKey.currentState!.validate()) {
           formKey.currentState!.save();

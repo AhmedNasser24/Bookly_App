@@ -10,7 +10,7 @@ class RegisterEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
-      hintText: 'البريد الإلكتروني',
+      hintText: "email",
       onSaved: (email) {
         if (email != null) {
           userInfoModel.email = email.replaceAll(RegExp(r' '), '');

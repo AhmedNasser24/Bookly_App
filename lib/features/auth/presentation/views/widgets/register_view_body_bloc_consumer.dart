@@ -15,6 +15,7 @@ class RegisterViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<RegisterCubit, RegisterState>(
       listener: (context, state) {
         if (state is RegisterSuccess) {
+          showSnackBar(context, "email is created successfully");
           Navigator.pop(context) ;
         } else if (state is RegisterFailure) {
           showSnackBar(context, state.errMessage);

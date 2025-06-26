@@ -9,7 +9,7 @@ class RegisterUserName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
-      hintText: "اسم المستخدم",
+      hintText: "username ",
       onSaved: (username) => userInfoModel.userName = username,
       validator: (username) {
         if (username == null || username.isEmpty) return "ادخل اسم المستخدم";

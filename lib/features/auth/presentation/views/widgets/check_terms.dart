@@ -14,18 +14,18 @@ class CheckTerms extends StatelessWidget {
     return  Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomCheckBox(userInfoModel),
+        CheckBox(userInfoModel),
         const Gap(12),
         Expanded(
           child: Text.rich(
             TextSpan(
               children: [
                 TextSpan(
-                  text: 'من خلال إنشاء حساب ، فإنك توافق على ',
+                  text: "By checking this box you agree to our ",
                   style: AppStyles.semibold13.copyWith(color: kGrayColor),
                 ),
                 TextSpan(
-                  text: 'الشروط والأحكام الخاصة بنا',
+                  text: 'terms and conditions',
                   style: AppStyles.semibold13.copyWith(color: kLightGreenColor),
                 ),
               ],

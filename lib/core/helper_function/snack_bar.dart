@@ -12,9 +12,10 @@ void showSnackBar(BuildContext context, String message) {
   // Show a new SnackBar
   messenger.showSnackBar(
     SnackBar(
+      
       duration: const Duration(seconds: 3),
-      content: Text(message, style: AppStyles.semibold12),
-      backgroundColor: kGrayColor,
+      content: Text(message, style: AppStyles.semibold12.copyWith(color: Colors.red)),
+      backgroundColor: kWhiteColor,
     ),
   );
 }

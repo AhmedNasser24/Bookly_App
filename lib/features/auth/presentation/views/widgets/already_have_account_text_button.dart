@@ -14,7 +14,7 @@ class AlreadyHaveAccountTextButton extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          "تمتلك حساب بالفعل؟",
+          "already have an account?",
           style: AppStyles.semibold14.copyWith(color: kGrayColor),
         ),
         GestureDetector(
@@ -22,7 +22,7 @@ class AlreadyHaveAccountTextButton extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Text(
-            " تسجيل دخول",
+            " login",
             style: AppStyles.semibold14.copyWith(color: kDarkGreenColor),
           ),
         ),

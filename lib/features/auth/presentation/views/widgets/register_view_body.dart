@@ -5,9 +5,12 @@ import '../../../../../constants.dart';
 import '../../../data/models/user_info_model.dart';
 import 'already_have_account_text_button.dart';
 import 'check_terms.dart';
+import 'register_address.dart';
 import 'register_button.dart';
 import 'register_email.dart';
-import 'register_password.dart';
+import 'register_full_name.dart';
+import 'register_password_and_confirm_password.dart';
+import 'register_phone_num.dart';
 import 'register_user_name.dart';
 
 class RegisterViewBody extends StatefulWidget {
@@ -30,11 +33,17 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
           child: Column(
             children: [
               const Gap(kTopSpace),
+              RegisterFullName(userInfoModel),
+              const Gap(20),
               RegisterUserName(userInfoModel),
               const Gap(20),
               RegisterEmail(userInfoModel),
               const Gap(20),
-              RegisterPassword(userInfoModel),
+              RegisterPasswordAndConfirmPassword(userInfoModel),
+              const Gap(30),
+              RegisterPhoneNum(userInfoModel),
+              const Gap(20),
+              RegisterAddress(userInfoModel),
               const Gap(30),
               CheckTerms(userInfoModel),
               const Gap(30),
